@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center ;
+}
+
+header {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    
+}
+
+a:hover {
+    text-decoration: none;
+    color: #6d6c6c;
+}

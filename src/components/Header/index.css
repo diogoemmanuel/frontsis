@@ -1,0 +1,21 @@
+.imgPenedo {
+    width: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #CDCDCD;
+    padding: 0.8rem;
+    
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
