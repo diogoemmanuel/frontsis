@@ -33,6 +33,7 @@ function Estoque() {
 
   const handleGeneratePDF = () => {
     const doc = new jsPDF();
+    const estoqueOrdenado = [...estoque].sort((a, b) => a.nome.localeCompare(b.nome));
   
     const currentDate = format(new Date(), 'dd/MM/yyyy HH:mm'); // Obtém a data e hora atual formatada
     const title = "Relatório do estoque";
@@ -55,7 +56,7 @@ function Estoque() {
   
     doc.autoTable({
       head: [['Nome', 'Modelo', 'Patrimônio', 'Entrada', 'Saída', 'Local']],
-      body: estoque.map(({ nome, modelo, patrimonio, entrada, saida, local }) => [nome, modelo, patrimonio, entrada, saida, local]),
+      body: estoqueOrdenado.map(({ nome, modelo, patrimonio, entrada, saida, local }) => [nome, modelo, patrimonio, entrada, saida, local]),
       ...tableStyles
     });
   
